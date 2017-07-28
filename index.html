@@ -25,6 +25,9 @@
   <meta name="image:Title Logo" content=""/>
   <meta name="image:Banner" content=""/>
   <meta name="image:Og Image" content=""/>
+  
+  <meta name="image:Appstore Banner" content=""/>
+  <meta name="image:GooglePlay Banner" content=""/>
 
   <meta name="image:02 l Introduction Heading Image" content="" />
   <meta name="image:06 l Footer Additional Image" content="" />
@@ -83,26 +86,63 @@
 
   <meta name="text:05 l Track01 Title" content="" />
   <meta name="text:05 l Track01 Description" content="" />
+  <meta name="image:05 l Track01 Jacket" content="" />
   <meta name="text:05 l Track02 Title" content="" />
   <meta name="text:05 l Track02 Description" content="" />
+  <meta name="image:05 l Track02 Jacket" content="" />
   <meta name="text:05 l Track03 Title" content="" />
   <meta name="text:05 l Track03 Description" content="" />
+  <meta name="image:05 l Track03 Jacket" content="" />
   <meta name="text:05 l Track04 Title" content="" />
   <meta name="text:05 l Track04 Description" content="" />
+  <meta name="image:05 l Track04 Jacket" content="" />
   <meta name="text:05 l Track05 Title" content="" />
   <meta name="text:05 l Track05 Description" content="" />
+  <meta name="image:05 l Track05 Jacket" content="" />
   <meta name="text:05 l Track06 Title" content="" />
   <meta name="text:05 l Track06 Description" content="" />
+  <meta name="image:05 l Track06 Jacket" content="" />
   <meta name="text:05 l Track07 Title" content="" />
   <meta name="text:05 l Track07 Description" content="" />
+  <meta name="image:05 l Track07 Jacket" content="" />
   <meta name="text:05 l Track08 Title" content="" />
   <meta name="text:05 l Track08 Description" content="" />
+  <meta name="image:05 l Track08 Jacket" content="" />
   <meta name="text:05 l Track09 Title" content="" />
   <meta name="text:05 l Track09 Description" content="" />
+  <meta name="image:05 l Track09 Jacket" content="" />
   <meta name="text:05 l Track10 Title" content="" />
   <meta name="text:05 l Track10 Description" content="" />
+  <meta name="image:05 l Track10 Jacket" content="" />
   <!--※トラック11以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+  
+  <meta name="text:05 l Track11 Title" content="" />
+  <meta name="text:05 l Track11 Description" content="" />
+  <meta name="image:05 l Track11 Jacket" content="" />
+  <meta name="text:05 l Track12 Title" content="" />
+  <meta name="text:05 l Track12 Description" content="" />
+  <meta name="image:05 l Track12 Jacket" content="" />
+  <!--
+  <meta name="text:05 l Track13 Title" content="" />
+  <meta name="text:05 l Track13 Description" content="" />
+  <meta name="image:05 l Track13 Jacket" content="" />
+  <meta name="text:05 l Track14 Title" content="" />
+  <meta name="text:05 l Track14 Description" content="" />
+  <meta name="image:05 l Track14 Jacket" content="" />
+  <meta name="text:05 l Track15 Title" content="" />
+  <meta name="text:05 l Track15 Description" content="" />
+  <meta name="image:05 l Track15 Jacket" content="" />
+  <meta name="text:05 l Track16 Title" content="" />
+  <meta name="text:05 l Track16 Description" content="" />
+  <meta name="image:05 l Track16 Jacket" content="" />
+  <meta name="text:05 l Track17 Title" content="" />
+  <meta name="text:05 l Track17 Description" content="" />
+  <meta name="image:05 l Track17 Jacket" content="" />
+  <meta name="text:05 l Track18 Title" content="" />
+  <meta name="text:05 l Track18 Description" content="" />
+  <meta name="image:05 l Track18 Jacket" content="" />
 
+-->
   <meta name="text:06 l Footer Additional Heading" content="" />
   <meta name="text:06 l Footer Additional Text" content="" />
 
@@ -319,7 +359,7 @@ style="background-color: {color:Accent};"
           <dt><span class="spec-dl-label">RELEASE DATE</span></dt>
           <dd>{text:03 l Release Date}</dd>
 
-          <dt><span class="spec-dl-label">BOOTH</span></dt>
+          <dt><span class="spec-dl-label">GENRE</span></dt>
           <dd>{text:03 l Booth Number}</dd>
 
           <dt><span class="spec-dl-label">PRICE</span></dt>
@@ -453,10 +493,10 @@ style="background-color: {color:Accent};"
       <h2>{text:03 l Store Buttons Heading}</h2>
     </header>
     <div class="spec-buy-container">
-      <a href="{text:03 l Store01 URL}" class="spec-buy-button btn">{text:03 l Store01 Name}</a>
+      <a href="{text:03 l Store01 URL}"><img alt="{text:03 l Store01 Name}" src="{image:Appstore Banner}"/></a>
       {/block:If03lStore01Name}
       {block:If03lStore02Name}
-      <a href="{text:03 l Store02 URL}" class="spec-buy-button btn">{text:03 l Store02 Name}</a>
+      <a href="{text:03 l Store02 URL}"><img alt="{text:03 l Store02 Name}" src="{image:GooglePlay Banner}"/></a>
       {/block:If03lStore02Name}
       {block:If03lStore03Name}
       <a href="{text:03 l Store03 URL}" class="spec-buy-button btn">{text:03 l Store03 Name}</a>
@@ -474,111 +514,196 @@ style="background-color: {color:Accent};"
         <h2><b>収録楽曲(抜粋)</b></h2>
       </header>
       <div class="section-content">
-        <ol class="tracklist">
+        <ul class="credit">
             <li class="track-container">
               <div class="track-number">01</div>
               <div class="track-content">
-                <span class="track-title">{text:05 l Track01 Title}</span>
-                <span class="track-meta">{text:05 l Track01 Description}</span>
+                <span class="credit-title">{text:05 l Track01 Title}</span>
+                <span class="credit-role">{text:05 l Track01 Description}</span>
               </div>
-              <img src="{image:Jacket}" alt="{Title}" class="jacket-image" width=100 height=100>
+              <img src="{image:05 l Track01 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
             </li>
           {/block:If05lTrack01Title}
           {block:If05lTrack02Title}
           <li class="track-container">
             <div class="track-number">02</div>
             <div class="track-content">
-              <span class="track-title">{text:05 l Track02 Title}</span>
-              <span class="track-meta">{text:05 l Track02 Description}</span>
+              <span class="credit-title">{text:05 l Track02 Title}</span>
+              <span class="credit-role">{text:05 l Track02 Description}</span>
             </div>
-            <img src="{image:Jacket}" alt="{Title}" class="jacket-image" width=100 height=100>
+            <img src="{image:05 l Track02 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
           </li>
           {/block:If05lTrack02Title}
           {block:If05lTrack03Title}
           <li class="track-container">
             <div class="track-number">03</div>
             <div class="track-content">
-              <span class="track-title">{text:05 l Track03 Title}</span>
-              <span class="track-meta">{text:05 l Track03 Description}</span>
+              <span class="credit-title">{text:05 l Track03 Title}</span>
+              <span class="credit-role">{text:05 l Track03 Description}</span>
             </div>
-            <img src="{image:Jacket}" alt="{Title}" class="jacket-image" width=100 height=100>
+            <img src="{image:05 l Track03 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
           </li>
           {/block:If05lTrack03Title}
           {block:If05lTrack04Title}
           <li class="track-container">
             <div class="track-number">04</div>
             <div class="track-content">
-              <span class="track-title">{text:05 l Track04 Title}</span>
-              <span class="track-meta">{text:05 l Track04 Description}</span>
+              <span class="credit-title">{text:05 l Track04 Title}</span>
+              <span class="credit-role">{text:05 l Track04 Description}</span>
             </div>
-            <img src="{image:Jacket}" alt="{Title}" class="jacket-image" width=100 height=100>
+            <img src="{image:05 l Track04 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
           </li>
           {/block:If05lTrack04Title}
           {block:If05lTrack05Title}
           <li class="track-container">
             <div class="track-number">05</div>
             <div class="track-content">
-              <span class="track-title">{text:05 l Track05 Title}</span>
-              <span class="track-meta">{text:05 l Track05 Description}</span>
+              <span class="credit-title">{text:05 l Track05 Title}</span>
+              <span class="credit-role">{text:05 l Track05 Description}</span>
             </div>
-            <img src="{image:Jacket}" alt="{Title}" class="jacket-image" width=100 height=100>
+            <img src="{image:05 l Track05 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
           </li>
           {/block:If05lTrack05Title}
           {block:If05lTrack06Title}
           <li class="track-container">
             <div class="track-number">06</div>
             <div class="track-content">
-              <span class="track-title">{text:05 l Track06 Title}</span>
-              <span class="track-meta">{text:05 l Track06 Description}</span>
+              <span class="credit-title">{text:05 l Track06 Title}</span>
+              <span class="credit-role">{text:05 l Track06 Description}</span>
             </div>
-            <img src="{image:Jacket}" alt="{Title}" class="jacket-image" width=100 height=100>
+            <img src="{image:05 l Track06 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
           </li>
           {/block:If05lTrack06Title}
           {block:If05lTrack07Title}
           <li class="track-container">
             <div class="track-number">07</div>
             <div class="track-content">
-              <span class="track-title">{text:05 l Track07 Title}</span>
-              <span class="track-meta">{text:05 l Track07 Description}</span>
+              <span class="credit-title">{text:05 l Track07 Title}</span>
+              <span class="credit-role">{text:05 l Track07 Description}</span>
             </div>
-            <img src="{image:Jacket}" alt="{Title}" class="jacket-image" width=100 height=100>
+            <img src="{image:05 l Track07 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
           </li>
           {/block:If05lTrack07Title}
           {block:If05lTrack08Title}
           <li class="track-container">
             <div class="track-number">08</div>
             <div class="track-content">
-              <span class="track-title">{text:05 l Track08 Title}</span>
-              <span class="track-meta">{text:05 l Track08 Description}</span>
+              <span class="credit-title">{text:05 l Track08 Title}</span>
+              <span class="track-role">{text:05 l Track08 Description}</span>
             </div>
-            <img src="{image:Jacket}" alt="{Title}" class="jacket-image" width=100 height=100>
+            <img src="{image:05 l Track08 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
           </li>
           {/block:If05lTrack08Title}
           {block:If05lTrack09Title}
           <li class="track-container">
             <div class="track-number">09</div>
             <div class="track-content">
-              <span class="track-title">{text:05 l Track09 Title}</span>
-              <span class="track-meta">{text:05 l Track09 Description}</span>
+              <span class="credit-title">{text:05 l Track09 Title}</span>
+              <span class="track-role">{text:05 l Track09 Description}</span>
             </div>
-            <img src="{image:Jacket}" alt="{Title}" class="jacket-image" width=100 height=100>
+            <img src="{image:05 l Track09 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
           </li>
           {/block:If05lTrack09Title}
           {block:If05lTrack10Title}
           <li class="track-container">
             <div class="track-number">10</div>
             <div class="track-content">
-              <span class="track-title">{text:05 l Track10 Title}</span>
-              <span class="track-meta">{text:05 l Track10 Description}</span>
+              <span class="credit-title">{text:05 l Track10 Title}</span>
+              <span class="track-role">{text:05 l Track10 Description}</span>
             </div>
-            <img src="{image:Jacket}" alt="{Title}" class="jacket-image" width=100 height=100>
+            <img src="{image:05 l Track10 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
           </li>
           {/block:If05lTrack10Title}
 
           <!--※トラック11以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+          
+          {block:If05lTrack11Title}
+          <li class="track-container">
+            <div class="track-number">11</div>
+            <div class="track-content">
+              <span class="credit-title">{text:05 l Track11 Title}</span>
+              <span class="track-role">{text:05 l Track11 Description}</span>
+            </div>
+            <img src="{image:05 l Track11 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
+          </li>
+          {/block:If05lTrack11Title}
+          {block:If05lTrack12Title}
+          <li class="track-container">
+            <div class="track-number">12</div>
+            <div class="track-content">
+              <span class="credit-title">{text:05 l Track12 Title}</span>
+              <span class="track-role">{text:05 l Track12 Description}</span>
+            </div>
+            <img src="{image:05 l Track12 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
+          </li>
+          {/block:If05lTrack12Title}
+          
+          <!--
+          {block:If05lTrack13Title}
+          <li class="track-container">
+            <div class="track-number">13</div>
+            <div class="track-content">
+              <span class="credit-title">{text:05 l Track13 Title}</span>
+              <span class="track-role">{text:05 l Track13 Description}</span>
+            </div>
+            <img src="{image:05 l Track13 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
+          </li>
+          {/block:If05lTrack13Title}
+          {block:If05lTrack14Title}
+          <li class="track-container">
+            <div class="track-number">14</div>
+            <div class="track-content">
+              <span class="credit-title">{text:05 l Track14 Title}</span>
+              <span class="track-role">{text:05 l Track14 Description}</span>
+            </div>
+            <img src="{image:05 l Track14 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
+          </li>
+          {/block:If05lTrack14Title}
+          {block:If05lTrack15Title}
+          <li class="track-container">
+            <div class="track-number">15</div>
+            <div class="track-content">
+              <span class="credit-title">{text:05 l Track15 Title}</span>
+              <span class="track-role">{text:05 l Track15 Description}</span>
+            </div>
+            <img src="{image:05 l Track15 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
+          </li>
+          {/block:If05lTrack15Title}
+          {block:If05lTrack16Title}
+          <li class="track-container">
+            <div class="track-number">16</div>
+            <div class="track-content">
+              <span class="credit-title">{text:05 l Track16 Title}</span>
+              <span class="track-role">{text:05 l Track16 Description}</span>
+            </div>
+            <img src="{image:05 l Track16 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
+          </li>
+          {/block:If05lTrack16Title}
+          {block:If05lTrack17Title}
+          <li class="track-container">
+            <div class="track-number">17</div>
+            <div class="track-content">
+              <span class="credit-title">{text:05 l Track17 Title}</span>
+              <span class="track-role">{text:05 l Track17 Description}</span>
+            </div>
+            <img src="{image:05 l Track17 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
+          </li>
+          {/block:If05lTrack17Title}
+          {block:If05lTrack18Title}
+          <li class="track-container">
+            <div class="track-number">18</div>
+            <div class="track-content">
+              <span class="credit-title">{text:05 l Track18 Title}</span>
+              <span class="credit-role">{text:05 l Track18 Description}</span>
+            </div>
+            <img src="{image:05 l Track18 Jacket}" alt="{Title}" class="jacket-image" width=150 height=150>
+          </li>
+          {/block:If05lTrack18Title}
+          
+          -->
 
           {block:If05lTrack01Title}
-        </ol>
+        </ul>
       </div>
     </div>
   </section>
@@ -740,11 +865,11 @@ style="background-color: {color:Accent};"
 {block:IfBannerImage}
 <section class="l-section section-banner">
   <header class="section-header">
-    <h2>BANNER</h2>
+    <h2>リンク</h2>
   </header>
   <div class="l-container">
     <div class="section-content">
-      <img src="{image:Banner}">
+      <a href="https://medium.com/kotonone"><img src="{image:Banner}"></a>
     </div>
   </div>
 </section>
@@ -764,6 +889,16 @@ style="background-color: {color:Accent};"
   </div>
 </section>
 {/block:If01lEnableShareButtons}
+
+<section class="l-section section-additionalContent">
+  <div class="l-container">
+    <div class="section-content">
+      {block:If06lFooterAdditionalText}
+        <a class="additionalContent-text" href="https://docs.google.com/forms/d/e/1FAIpQLSd1VvPIUGhjsoDNdq9kUqYy3KuiwYU33O6scPalOZmGouYefA/viewform?usp=sf_link">お問い合わせ</a>
+      {/block:If06lFooterAdditionalText}
+    </div>
+  </div>
+</section>
 
 <!-- Note: Do not delete the following section.
 ここから先のセクションは消去しないでください -->
